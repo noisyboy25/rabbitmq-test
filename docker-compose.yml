@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    restart: unless-stopped
+    environment:
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/
+  rabbitmq:
+    image: rabbitmq:alpine
+    ports:
+      - '5672:5672'
+    restart: unless-stopped
