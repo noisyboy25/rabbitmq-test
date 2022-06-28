@@ -1,7 +1,7 @@
 # rabbitmq-test
 
 ## Quickstart
-Run this to start Docker Compose stack
+Run this to start the Docker Compose stack
 ```sh
 docker-compose up
 ```
